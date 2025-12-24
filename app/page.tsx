@@ -43,7 +43,7 @@ const team = [
     bio: 'A seasoned Advocate of the High Court of Kenya with over a decade of experience in corporate and property law. Isaac has successfully managed complex high-value banking transactions for Cooperative Bank of Kenya and acted as lead counsel in significant land acquisition matters, including a Kshs 500 million transaction involving change of user and subdivision.',
     // linkedin: 'https://linkedin.com/in/isaacngugi',
     // email: 'isaac@isaaclawadvocates.co.ke',
-    image: '/isaac.jpg',
+    image: '/Isaac.jpg',
   },
   {
     name: 'Nuru Munyu Ndanu',
