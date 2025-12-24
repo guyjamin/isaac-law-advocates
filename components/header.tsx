@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, Moon, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useTheme } from '@/components/theme-provider'
@@ -42,9 +43,14 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="#home" className="-m-1.5 p-1.5">
-            <span className="font-serif text-2xl font-bold text-foreground">
-              Isaac Law <span className="text-primary">LLP</span>
-            </span>
+            <Image
+              src={theme === 'dark' ? '/LogoWhite.png' : '/LogoDark.png'}
+              alt="Isaac Law Advocates LLP"
+              width={180}
+              height={60}
+              className="h-12 w-auto"
+              priority
+            />
           </Link>
         </div>
         <div className="flex lg:hidden gap-2">
@@ -108,9 +114,13 @@ export function Header() {
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
             <div className="flex items-center justify-between">
               <Link href="#home" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                <span className="font-serif text-2xl font-bold text-foreground">
-                  Isaac Law <span className="text-primary">LLP</span>
-                </span>
+                <Image
+                  src={theme === 'dark' ? '/LogoWhite.png' : '/LogoDark.png'}
+                  alt="Isaac Law Advocates LLP"
+                  width={180}
+                  height={60}
+                  className="h-12 w-auto"
+                />
               </Link>
               <Button
                 variant="ghost"
