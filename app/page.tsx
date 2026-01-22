@@ -53,7 +53,7 @@ const team = [
     bio: 'A dedicated Partner specializing in public procurement and employment law. Nuru represented Jubilee Health Insurance in a major public procurement matter valued at Kshs 1.4 Billion, navigating the case from the Procurement Board to the Court of Appeal, and successfully handled land transfers valued at Kshs 22 Million for Elinuda Investment Limited.',
     // linkedin: 'https://linkedin.com/in/nurungangu',
     // email: 'nuru@isaaclawadvocates.co.ke',
-    image: 'https://placehold.co/400x400/1e3a8a/ffffff?text=NN',
+    image: '/Nuru.jpeg',
   },
   {
     name: 'Yunis Ibrahim Sheikh',
@@ -63,17 +63,17 @@ const team = [
     bio: 'An accomplished advocate with over 10 years of professional experience spanning legal, private, and non-profit sectors. Yunis served as Country Director for Rural Heart Kenya and Secretary for the Wajir West Constituency Development Fund (CDF), bringing extensive expertise in health systems management and infrastructure development projects.',
     // linkedin: 'https://linkedin.com/in/yunissheikh',
     // email: 'yunis@isaaclawadvocates.co.ke',
-    image: 'https://placehold.co/400x400/1e3a8a/ffffff?text=YS',
+    image: '/Yunis.jpg',
   },
   {
     name: 'Joseph Wakaba',
-    role: 'Senior Associate',
+    role: 'Consultant Partner',
     expertise: 'Dispute Resolution & ESG Compliance',
     credentials: 'LLB, Dip. Law',
     bio: 'A seasoned dispute resolution and commercial lawyer with nearly a decade of experience. Joseph is a pioneer in the Kenyan legal market for his focus on ESG (Environmental, Social, and Governance) compliance, consulting for major organizations on Responsible Business and Human Rights Due Diligence, providing comprehensive ESG compliance frameworks.',
     // linkedin: 'https://linkedin.com/in/josephwakaba',
     // email: 'joseph@isaaclawadvocates.co.ke',
-    image: 'https://placehold.co/400x400/1e3a8a/ffffff?text=JW',
+    image: '/Wakaba.jpg',
   },
 ]
 
@@ -498,7 +498,7 @@ export default function Home() {
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Office</h3>
                   <p className="text-muted-foreground">
-                    5th Floor, West Park Suites<br />
+                    9th Floor, West Park Suites<br />
                     Ojijo Road, Westlands<br />
                     Nairobi, Kenya
                   </p>

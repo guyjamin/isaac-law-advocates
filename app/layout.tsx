@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: 'Isaac Law Advocates LLP | Where Clarity Meets Justice',
   description: 'Professional legal services in Nairobi, Kenya. Expert lawyers specializing in corporate and commercial law, employment practice, litigation and dispute resolution, and private client services. Contact us today for a consultation.',
   keywords: ['law firm', 'lawyers', 'legal services', 'Nairobi', 'Kenya', 'corporate law', 'commercial law', 'employment law', 'litigation', 'dispute resolution', 'private client services', 'advocates'],
-  generator: 'v0.app',
+  generator: 'kairuu',
   icons: {
     icon: [
       {
