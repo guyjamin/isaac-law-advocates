@@ -69,9 +69,9 @@ const team = [
   {
     name: 'Isaac Gitere Njuguna',
     role: 'Managing Partner',
-    expertise: 'Corporate & Commercial Law',
-    credentials: 'LLB, Dip. Law (Kenya School of Law)',
-    bio: 'A seasoned Advocate of the High Court of Kenya with over a decade of experience in corporate and property law. Isaac has successfully managed complex high-value banking transactions for Cooperative Bank of Kenya and acted as lead counsel in significant land acquisition matters, including a Kshs 500 million transaction involving change of user and subdivision.',
+    expertise: 'Property Law, Banking & Finance, Corporate Law',
+    credentials: 'LLB (University of Nairobi, 2013), Dip. Law (Kenya School of Law, 2014)',
+    bio: 'Isaac is the Managing Partner at Isaac Law Advocates LLP and an Advocate of the High Court of Kenya with over a decade of distinguished experience. A member of the Law Society of Kenya and East Africa Law Society, Isaac previously served as Executive Partner at Fred and Isaac Advocates LLP (2021-2025) and Partner at Wacira Wambugu & Co. Advocates LLP (2016-2021). His expertise spans complex banking transactions, property development, and corporate law. Notable achievements include acting for Jalaram Pride Apartments in a Kshs. 1 Billion change of user and subdivision transaction, representing Fairshare Limited in a Kshs. 500 Million land development matter, and handling multiple high-value banking transactions for Co-operative Bank of Kenya and Development Bank of Kenya totaling over Kshs. 1 Billion in combined security documentation.',
     // linkedin: 'https://linkedin.com/in/isaacngugi',
     // email: 'isaac@isaaclaw.co.ke',
     image: '/Isaac.jpg',
