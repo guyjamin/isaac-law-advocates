@@ -21,14 +21,51 @@ const navigation = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
   const [isScrolled, setIsScrolled] = React.useState(false)
+  const [activeSection, setActiveSection] = React.useState('home')
   const { theme, toggleTheme } = useTheme()
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const id = href.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, '', href);
+      }
+      setMobileMenuOpen(false);
+    }
+  }
 
   React.useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { rootMargin: '-40% 0px -60% 0px' }
+    )
+
+    setTimeout(() => {
+      navigation.forEach((item) => {
+        const id = item.href.substring(1)
+        const element = document.getElementById(id)
+        if (element) observer.observe(element)
+      })
+    }, 100)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      observer.disconnect()
+    }
   }, [])
 
   return (
@@ -42,7 +79,7 @@ export function Header() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="#home" className="-m-1.5 p-1.5">
+          <a href="#home" className="-m-1.5 p-1.5" onClick={(e) => handleNavClick(e, '#home')}>
             <Image
               src={theme === 'dark' ? '/LogoWhite.png' : '/LogoDark.png'}
               alt="Isaac Law Advocates LLP"
@@ -51,7 +88,7 @@ export function Header() {
               className="h-12 w-auto"
               priority
             />
-          </Link>
+          </a>
         </div>
         <div className="flex lg:hidden gap-2">
           <Button
@@ -75,15 +112,24 @@ export function Header() {
           </Button>
         </div>
         <div className="hidden lg:flex lg:gap-x-8">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium leading-6 text-foreground hover:text-primary transition-colors"
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navigation.map((item) => {
+            const isActive = activeSection === item.href.substring(1)
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
+                className={cn(
+                  "text-sm font-medium leading-6 transition-colors",
+                  isActive
+                    ? "text-primary border-b-2 border-primary"
+                    : "text-foreground hover:text-primary"
+                )}
+              >
+                {item.name}
+              </a>
+            )
+          })}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-4 items-center">
           <Button
@@ -113,7 +159,7 @@ export function Header() {
           <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm" />
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
             <div className="flex items-center justify-between">
-              <Link href="#home" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#home" className="-m-1.5 p-1.5" onClick={(e) => handleNavClick(e, '#home')}>
                 <Image
                   src={theme === 'dark' ? '/LogoWhite.png' : '/LogoDark.png'}
                   alt="Isaac Law Advocates LLP"
@@ -121,7 +167,7 @@ export function Header() {
                   height={60}
                   className="h-12 w-auto"
                 />
-              </Link>
+              </a>
               <Button
                 variant="ghost"
                 size="icon"
@@ -133,16 +179,24 @@ export function Header() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-border">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-foreground hover:bg-muted"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                  {navigation.map((item) => {
+                    const isActive = activeSection === item.href.substring(1)
+                    return (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        onClick={(e) => handleNavClick(e, item.href)}
+                        className={cn(
+                          "-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 transition-colors",
+                          isActive
+                            ? "bg-primary/10 text-primary"
+                            : "text-foreground hover:bg-muted"
+                        )}
+                      >
+                        {item.name}
+                      </a>
+                    )
+                  })}
                 </div>
                 <div className="py-6">
                   <Button asChild className="w-full gap-2">

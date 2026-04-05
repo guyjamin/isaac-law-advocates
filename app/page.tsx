@@ -71,7 +71,7 @@ const team = [
     role: 'Managing Partner',
     expertise: 'Property Law, Banking & Finance, Corporate Law',
     credentials: 'LLB (University of Nairobi, 2013), Dip. Law (Kenya School of Law, 2014)',
-    bio: 'Isaac is the Managing Partner at Isaac Law Advocates LLP and an Advocate of the High Court of Kenya with over a decade of distinguished experience. A member of the Law Society of Kenya and East Africa Law Society, Isaac previously served as Executive Partner at Fred and Isaac Advocates LLP (2021-2025) and Partner at Wacira Wambugu & Co. Advocates LLP (2016-2021). His expertise spans complex banking transactions, property development, and corporate law. Notable achievements include acting for Jalaram Pride Apartments in a Kshs. 1 Billion change of user and subdivision transaction, representing Fairshare Limited in a Kshs. 500 Million land development matter, and handling multiple high-value banking transactions for Co-operative Bank of Kenya and Development Bank of Kenya totaling over Kshs. 1 Billion in combined security documentation.',
+    bio: "Isaac isn't just a lawyer; he's the dealmaker you want in your corner. As Managing Partner and a veteran Advocate of the High Court, he has spent over a decade orchestrating Kenya's most complex property and banking transactions. From closing a Kshs. 1 Billion development for Jalaram Pride to securing vast portfolios for Co-operative Bank, Isaac's career is defined by high-stakes wins. A UoN alum and former Executive Partner at Fred and Isaac Advocates, he brings a rare blend of tactical brilliance and relentless drive to every case. If you're building the future, Isaac is the one securing the foundation.",
     // linkedin: 'https://linkedin.com/in/isaacngugi',
     // email: 'isaac@isaaclaw.co.ke',
     image: '/Isaac.jpg',
@@ -106,16 +106,16 @@ const team = [
     // email: 'joseph@isaaclaw.co.ke',
     image: '/Wakaba.jpg',
   },
-  {
-    name: 'Rachel Wanjiku Kanai',
-    role: 'Associate Advocate',
-    expertise: 'Litigation & Conveyancing',
-    credentials: 'LLB (Africa Nazarene University), Dip. Law',
-    bio: 'A dedicated Associate Advocate with comprehensive expertise in litigation, conveyancing, employment law, and intellectual property. Rachel combines strong case management skills with client-focused service delivery, having successfully handled diverse legal matters from court representation to commercial transactions and trademark registrations.',
-    // linkedin: 'https://linkedin.com/in/rachelkanai',
-    // email: 'rachel@isaaclaw.co.ke',
-    image: '/Rachel.jpeg',
-  },
+  // {
+  //   name: 'Rachel Wanjiku Kanai',
+  //   role: 'Associate Advocate',
+  //   expertise: 'Litigation & Conveyancing',
+  //   credentials: 'LLB (Africa Nazarene University), Dip. Law',
+  //   bio: 'A dedicated Associate Advocate with comprehensive expertise in litigation, conveyancing, employment law, and intellectual property. Rachel combines strong case management skills with client-focused service delivery, having successfully handled diverse legal matters from court representation to commercial transactions and trademark registrations.',
+  //   // linkedin: 'https://linkedin.com/in/rachelkanai',
+  //   // email: 'rachel@isaaclaw.co.ke',
+  //   image: '/Rachel.jpeg',
+  // },
 ]
 
 const clients = [
@@ -266,7 +266,7 @@ export default function Home() {
               Isaac Law Advocates <span className="text-primary">LLP</span>
             </h1>
             <p className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground/90 text-balance">
-              Where Clarity Meets Justice
+              Your Justice Our Passion
             </p>
             <p className="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground text-pretty">
               Professional legal services delivered with integrity, expertise, and a commitment to your success.

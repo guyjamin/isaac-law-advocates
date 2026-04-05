@@ -1,19 +1,25 @@
-@import 'tailwindcss';
+﻿@import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
 
 /* Updated color scheme for Isaac Law LLP: white, #C6A772 (gold), #25414D (teal) */
 :root {
-  --background: oklch(1 0 0); /* white */
-  --foreground: oklch(0.3 0.05 210); /* dark teal text */
+  --background: oklch(1 0 0);
+  /* white */
+  --foreground: oklch(0.3 0.05 210);
+  /* dark teal text */
   --card: oklch(0.99 0 0);
   --card-foreground: oklch(0.3 0.05 210);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.3 0.05 210);
-  --primary: oklch(0.7 0.08 70); /* #C6A772 warm gold */
-  --primary-foreground: oklch(0.15 0.05 210); /* dark text on gold */
-  --secondary: oklch(0.35 0.06 210); /* #25414D deep teal */
-  --secondary-foreground: oklch(0.99 0 0); /* white on teal */
+  --primary: oklch(0.7 0.08 70);
+  /* #C6A772 warm gold */
+  --primary-foreground: oklch(0.15 0.05 210);
+  /* dark text on gold */
+  --secondary: oklch(0.35 0.06 210);
+  /* #25414D deep teal */
+  --secondary-foreground: oklch(0.99 0 0);
+  /* white on teal */
   --muted: oklch(0.96 0.01 70);
   --muted-foreground: oklch(0.5 0.03 210);
   --accent: oklch(0.7 0.08 70);
@@ -35,13 +41,16 @@
 }
 
 .dark {
-  --background: oklch(0.2 0.05 210); /* #25414D as dark background */
-  --foreground: oklch(0.98 0 0); /* white text */
+  --background: oklch(0.2 0.05 210);
+  /* #25414D as dark background */
+  --foreground: oklch(0.98 0 0);
+  /* white text */
   --card: oklch(0.25 0.05 210);
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.25 0.05 210);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.7 0.08 70); /* gold accent */
+  --primary: oklch(0.7 0.08 70);
+  /* gold accent */
   --primary-foreground: oklch(0.15 0.05 210);
   --secondary: oklch(0.3 0.05 210);
   --secondary-foreground: oklch(0.98 0 0);
@@ -109,15 +118,18 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
-  
+
   /* Smooth transitions for theme toggle */
   html {
     transition: background-color 0.3s ease, color 0.3s ease;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
-  
+
   * {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   }
